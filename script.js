@@ -257,8 +257,8 @@ function photo(img, width = 600) {
     }
 
     if (img.startsWith("images/")) {
-        return img;
-    }
+    return img.replace("images/", "");
+}
 
     return `https://images.unsplash.com/${img}?auto=format&fit=crop&w=${width}&q=80`;
 }
